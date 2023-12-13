@@ -3,22 +3,24 @@ body {
 	margin: auto;
 }
 * {
-	font-family: 'Inter';
+	font-family: "Inter";
 	font-style: normal;
+	font-display: swap;
 }
 header {
 	background-color: white;
 	position: sticky;
-	top:0;
+	top: 0;
 	z-index: 1000;
 	display: flex;
 	justify-content: space-between;
 	padding-inline: 100px;
 	padding-block: 30px;
 	align-items: center;
+	width: 100%;
 }
 
-h1{
+h1 {
 	font-size: 26px;
 }
 
@@ -35,7 +37,7 @@ nav li {
 
 nav a {
 	text-decoration: none;
-	color: #000
+	color: #000;
 }
 
 .social-link img {
@@ -45,15 +47,16 @@ nav a {
 
 #about {
 	display: flex;
-	background-color: #F6D2B8;
+	background-color: #f6d2b8;
 	padding-inline: 100px;
 	padding-block: 100px;
 	position: relative;
+	width: 100%;
 }
 
 .picture.left::before {
-	content: ' ';
-	background-color: #E5975F;
+	content: " ";
+	background-color: #e5975f;
 	width: 374px;
 	height: 329px;
 	position: absolute;
@@ -73,18 +76,20 @@ nav a {
 	height: auto;
 }
 #about-me {
-	flex: 2
+	flex: 2;
 }
+
 h2 {
 	margin-top: 1em;
 	margin-bottom: 60px;
 	font-size: 30px;
 }
 .about-me__introduction {
-	font-family: 'Spectral';
+	font-family: "Spectral";
 	font-weight: 800;
 	font-style: italic;
 	width: 60%;
+	font-display: swap;
 }
 #about-me p {
 	width: 80%;
@@ -94,40 +99,44 @@ h2 {
 /* #gallery {
 		min-height: 100vh;
 } */
-.title{
+.title {
 	text-align: center;
 	padding-block: 2em;
+}
+#gallery {
+	width: 100%;
 }
 .gallery .nav {
 	justify-content: center;
 }
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
 	color: #fff;
-	background-color: #5E5926;
-	border-radius:0 ;
+	background-color: #5e5926;
+	border-radius: 0;
 }
 .nav-pills .nav-link {
-	color: #000
+	color: #000;
 }
 .item-column {
 	position: relative;
 	margin-bottom: 0 !important;
 	padding: 0;
 }
-.item-column::after{
+.item-column::after {
 	content: "";
 	display: block;
 	padding-bottom: 100%;
-
 }
 .gallery-item {
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	padding: .5em;
+	padding: 0.5em;
 }
-.mg-prev, .mg-next {
+.mg-prev,
+.mg-next {
 	width: 30px;
 	height: 30px;
 	border-radius: 00%;
@@ -138,33 +147,35 @@ h2 {
 }
 
 .quote {
-	font-family: 'Spectral';
+	font-family: "Spectral";
 	font-style: italic;
 	width: 70%;
 	margin: auto;
 	padding-block: 3em;
+	font-display: swap;
 }
 .quote__text {
-	font-family: Spectral;
+	font-family: "Spectral";
 	font-style: italic;
 	font-weight: 300;
-	font-size: 26px;
-
+	font-size: calc(1.375rem + 1.5vw);
+	font-display: swap;
 }
 .quote__author {
-	font-family: Spectral;
+	font-family: "Spectral";
 	font-weight: 800;
 	font-size: 22px;
+	font-display: swap;
 }
 
 #services {
 	margin: auto;
-	background-color: #A8D5D8 ;
+	background-color: #a8d5d8;
 	position: relative;
 }
-#services .container::before{
-	content: ' ';
-	background-color: #1C6474;
+#services .container::before {
+	content: " ";
+	background-color: #1c6474;
 	position: absolute;
 	width: 100%;
 	height: 30%;
@@ -176,8 +187,7 @@ h2 {
 #services .container {
 	justify-content: space-between;
 	display: flex;
-	padding : 2em 0;
-
+	padding: 2em 0;
 }
 
 .service {
@@ -194,9 +204,10 @@ h2 {
 
 #contact {
 	margin: auto;
-	background-color: #D8D3A8 ;
+	background-color: #d8d3a8;
 	position: relative;
 	padding-inline: 100px;
+	width: 100%;
 	padding-block: 100px;
 }
 
@@ -204,8 +215,8 @@ h2 {
 	display: flex;
 }
 .picture.right::before {
-	content: ' ';
-	background-color: #BEB45A;
+	content: " ";
+	background-color: #beb45a;
 	width: 374px;
 	height: 329px;
 	position: absolute;
@@ -214,8 +225,7 @@ h2 {
 	z-index: -1;
 }
 .form-container {
-	flex : 2;
-
+	flex: 2;
 }
 form {
 	display: flex;
@@ -242,30 +252,31 @@ form textarea {
 	margin-bottom: 20px;
 }
 input[type="submit"] {
-	background-color: #BEB45A;
-	padding: .5em 1em
+	background-color: #beb45a;
+	padding: 0.5em 1em;
 }
 
 @media all and (max-width: 1180px) {
 	.picture {
-		flex : 2;
+		flex: 2;
 	}
-	#about, #contact .container {
+	#about,
+	#contact .container {
 		align-items: center;
 	}
 	.about-me__title {
 		margin-top: 0;
 		margin-bottom: 1em;
 	}
-	#about-me h6, #about-me p {
+	#about-me h6,
+	#about-me p {
 		width: 100%;
 	}
 }
 
 @media all and (max-width: 1000px) {
-	#about{
+	#about {
 		flex-direction: column;
-
 	}
 	.picture {
 		width: 50%;
@@ -279,7 +290,7 @@ input[type="submit"] {
 		left: 0;
 		z-index: -1;
 	}
-	.about-me__title{
+	.about-me__title {
 		text-align: center;
 		margin-top: 1em;
 	}
@@ -290,13 +301,13 @@ input[type="submit"] {
 		width: 100%;
 		max-width: 100%;
 		height: auto;
-		margin: 2em 0
+		margin: 2em 0;
 	}
-	.service__description{
+	.service__description {
 		margin-bottom: 1em;
 	}
 
-	#services .container::before{
+	#services .container::before {
 		width: 30%;
 		height: 100%;
 		bottom: 0;
@@ -326,7 +337,8 @@ input[type="submit"] {
 		flex-direction: column;
 		padding-inline: 0;
 	}
-	.top-header .nav, .top-header .nav ul {
+	.top-header .nav,
+	.top-header .nav ul {
 		width: 100%;
 		padding: 0 0 0 0;
 	}
@@ -335,7 +347,8 @@ input[type="submit"] {
 		padding-block: 1em;
 		text-align: center;
 	}
-	.picture.left::before, .picture.right::before {
+	.picture.left::before,
+	.picture.right::before {
 		height: 150px;
 	}
 	#services .container {
@@ -344,7 +357,8 @@ input[type="submit"] {
 	.service {
 		max-width: 90%;
 	}
-	#about, #contact {
+	#about,
+	#contact {
 		padding-inline: 2em;
 		padding-block: 2em;
 	}
@@ -355,4 +369,3 @@ input[type="submit"] {
 		width: 80%;
 	}
 }
-
