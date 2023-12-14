@@ -3,7 +3,7 @@ body {
 	margin: auto;
 }
 * {
-	font-family: "Inter";
+	font-family: "Inter", sans-serif;
 	font-style: normal;
 	font-display: swap;
 }
@@ -23,7 +23,13 @@ header {
 h1 {
 	font-size: 26px;
 }
-
+nav {
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: 0;
+	margin-bottom: 0;
+	list-style: none;
+}
 nav ul {
 	display: flex;
 	list-style-type: none;
@@ -38,8 +44,11 @@ nav li {
 nav a {
 	text-decoration: none;
 	color: #000;
+	font-size: 14px;
 }
-
+nav a:hover {
+	color: #000;
+}
 .social-link img {
 	width: 20px;
 	height: 20px;
@@ -78,36 +87,48 @@ nav a {
 #about-me {
 	flex: 2;
 }
+#about-me h2 {
+	font-size: 30px;
+	padding-block: 1em;
+	text-align: left;
+}
 
 h2 {
-	margin-top: 1em;
-	margin-bottom: 60px;
-	font-size: 30px;
-}
-.about-me__introduction {
-	font-family: "Spectral";
-	font-weight: 800;
-	font-style: italic;
-	width: 60%;
-	font-display: swap;
-}
-#about-me p {
-	width: 80%;
-	font-size: 14px;
-}
-
-/* #gallery {
-		min-height: 100vh;
-} */
-.title {
 	text-align: center;
 	padding-block: 2em;
 }
+.about-me__introduction {
+	font-family: "Spectral", sans-serif;
+	font-weight: 800;
+	font-style: italic;
+	line-height: 1.2;
+	font-size: 1rem;
+	width: 60%;
+	font-display: swap;
+}
+.about-me__intention {
+	font-size: 14px;
+	width: 80%;
+}
+/* #gallery {
+		min-height: 100vh;
+} */
+/* .title {
+	text-align: center;
+	padding-block: 2em;
+} */
 #gallery {
 	width: 100%;
 }
+#gallery h2 {
+	text-align: center;
+	padding-block: 2em;
+}
 .gallery .nav {
 	justify-content: center;
+}
+.nav li {
+	padding-inline: 10px;
 }
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
@@ -147,7 +168,7 @@ h2 {
 }
 
 .quote {
-	font-family: "Spectral";
+	font-family: "Spectral", sans-serif;
 	font-style: italic;
 	width: 70%;
 	margin: auto;
@@ -155,14 +176,15 @@ h2 {
 	font-display: swap;
 }
 .quote__text {
-	font-family: "Spectral";
+	font-family: "Spectral", sans-serif;
 	font-style: italic;
+	line-height: 1.2;
 	font-weight: 300;
-	font-size: calc(1.375rem + 1.5vw);
+	font-size: 40px;
 	font-display: swap;
 }
 .quote__author {
-	font-family: "Spectral";
+	font-family: "Spectral", sans-serif;
 	font-weight: 800;
 	font-size: 22px;
 	font-display: swap;
@@ -264,9 +286,9 @@ input[type="submit"] {
 	#contact .container {
 		align-items: center;
 	}
-	.about-me__title {
+	h2 {
 		margin-top: 0;
-		margin-bottom: 1em;
+		/* margin-bottom: 1em; */
 	}
 	#about-me h6,
 	#about-me p {
@@ -290,9 +312,9 @@ input[type="submit"] {
 		left: 0;
 		z-index: -1;
 	}
-	.about-me__title {
+	h2 {
 		text-align: center;
-		margin-top: 1em;
+		/* margin-top: 1em; */
 	}
 	#services .container {
 		flex-direction: column;
@@ -333,16 +355,16 @@ input[type="submit"] {
 }
 
 @media all and (max-width: 650px) {
-	.top-header {
+	header {
 		flex-direction: column;
 		padding-inline: 0;
 	}
-	.top-header .nav,
-	.top-header .nav ul {
+	header nav,
+	header nav ul {
 		width: 100%;
 		padding: 0 0 0 0;
 	}
-	.top-header .nav li {
+	nav li {
 		flex: 1;
 		padding-block: 1em;
 		text-align: center;
