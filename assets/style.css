@@ -122,6 +122,9 @@ h2 {
 .nav-pills .nav-link {
 	color: #000;
 }
+#gallery .container {
+	max-width: 1320px;
+}
 .item-column {
 	position: relative;
 	margin-bottom: 0 !important;
@@ -180,8 +183,10 @@ h2 {
 #services .container {
 	justify-content: space-between;
 	display: flex;
+	max-width: 1320px;
 	padding: 2em 0;
 }
+
 .service {
 	background-color: white;
 	max-width: 390px;
@@ -192,6 +197,12 @@ h2 {
 	flex-direction: column;
 	justify-content: space-between;
 	z-index: 1;
+}
+h3 {
+	font-size: 28px;
+}
+h4 {
+	font-size: 24px;
 }
 #contact {
 	margin: auto;
